@@ -93,9 +93,11 @@ export const ZStack: React.FC<ZStackProps> = ({
 }) => {
   return (
     <div
-      className={clsx("relative", className)}
+      className={clsx("grid place-items-stretch", className)}
       {...props}>
-      {children}
+      {React.Children.map(children, (child, index) => (
+        <div style={{ gridArea: "1 / 1", zIndex: index }}>{child}</div>
+      ))}
     </div>
   );
 };

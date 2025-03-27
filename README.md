@@ -42,8 +42,8 @@ export default function Example() {
       </HStack>
 
       <ZStack className="h-32 bg-gray-100">
-        <div className="absolute inset-0 bg-red-200">Layer 1</div>
-        <div className="absolute inset-4 bg-green-200">Layer 2</div>
+        <div className="bg-red-200">Layer 1</div>
+        <div className="bg-green-200">Layer 2</div>
       </ZStack>
     </VStack>
   );
@@ -94,8 +94,8 @@ Stacks elements on top of each other with `relative` and `absolute` positioning.
 
 ```tsx
 <ZStack className="h-48">
-  <div className="absolute inset-0 bg-blue-100" />
-  <div className="absolute inset-4 bg-blue-300" />
+  <div className="bg-blue-100" />
+  <div className="bg-blue-300" />
 </ZStack>
 ```
 

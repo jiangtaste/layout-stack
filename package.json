@@ -1,6 +1,6 @@
 {
 	"name": "@jiangtaste/layout-stack",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "SwiftUI-inspired layout components for React using Tailwind CSS",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -38,6 +38,7 @@
 		"url": "git+https://github.com/jiangtaste/layout-stack.git"
 	},
 	"dependencies": {
+		"@jiangtaste/layout-stack": "^1.0.2",
 		"clsx": "^2.1.1",
 		"react": "^18.3.1"
 	},
