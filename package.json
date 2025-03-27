@@ -1,6 +1,6 @@
 {
 	"name": "@jiangtaste/layout-stack",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "SwiftUI-inspired layout components for React using Tailwind CSS",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -8,14 +8,17 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsc",
+		"build": "tsup src/index.tsx --dts",
 		"prepublishOnly": "pnpm run build"
 	},
 	"peerDependencies": {
-		"clsx": "^2.0.0",
-		"react": "^17.0.0 || ^18.0.0",
-		"react-dom": "^17.0.0 || ^18.0.0",
-		"tailwindcss": "^3.0.0"
+		"clsx": "^2.1.1",
+		"react": "^18.3.1"
+	},
+	"peerDependenciesMeta": {
+		"tailwindcss": {
+			"optional": true
+		}
 	},
 	"keywords": [
 		"react",
@@ -32,11 +35,20 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/jiangtaste/layout-stack.git"
+		"url": "git+https://github.com/jiangtaste/layout-stack.git"
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"react": "^18.3.1"
 	},
 	"devDependencies": {
 		"@types/node": "^22.13.13",
 		"@types/react": "^19.0.12",
+		"tsup": "^8.4.0",
 		"typescript": "^5.8.2"
-	}
+	},
+	"bugs": {
+		"url": "https://github.com/jiangtaste/layout-stack/issues"
+	},
+	"homepage": "https://github.com/jiangtaste/layout-stack#readme"
 }

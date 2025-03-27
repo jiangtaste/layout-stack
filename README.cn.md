@@ -1,32 +1,32 @@
 # 🧱 layout-stack
 
-A lightweight and reusable set of React layout components built with Tailwind CSS.
+一组轻量、可复用的 React 布局组件，使用 Tailwind CSS 构建，适用于现代前端项目。
 
-Includes: `HStack`, `VStack`, `Stack`, `ZStack`, and `Spacer` — inspired by layout patterns from SwiftUI, Figma, and other design tools.
+包括：`HStack`, `VStack`, `Stack`, `ZStack`, `Spacer` 等，设计灵感来自 SwiftUI/Figma 等开发工具的 Stack 概念。
 
-## 📦 Installation
+## 📦 安装
 
 ```bash
 npm install layout-stack
 ```
 
-Or use Yarn / pnpm:
+你也可以使用 Yarn 或 pnpm：
 
 ```bash
 yarn add layout-stack
-# or
+# 或
 pnpm add layout-stack
 ```
 
-> ⚠️ **Peer Dependencies:**
+> ⚠️ **依赖要求：**
 >
 > - React 18+
-> - Tailwind CSS (make sure your project has it properly configured)
-> - `clsx` is used internally and handled as a peer dependency
+> - Tailwind CSS 已配置（确保启用了 `space-x-*`, `space-y-*`, `flex`, `relative` 等常规 utility 类）
+> - `clsx` 会自动作为 peer 依赖一起处理
 
 ---
 
-## 🚀 Quick Usage
+## 🚀 快速使用
 
 ```tsx
 import { HStack, VStack, Stack, ZStack, Spacer } from "layout-stack";
@@ -52,11 +52,11 @@ export default function Example() {
 
 ---
 
-## 📚 Component Overview
+## 📚 组件介绍
 
 ### `HStack`
 
-Horizontally arranges children using `flex-row` and `space-x-{spacing}`.
+水平排列子元素，内部使用 `flex-row` 和 `space-x-{spacing}`。
 
 ```tsx
 <HStack spacing="4" className="bg-white">
@@ -68,7 +68,7 @@ Horizontally arranges children using `flex-row` and `space-x-{spacing}`.
 
 ### `VStack`
 
-Vertically arranges children using `flex-col` and `space-y-{spacing}`.
+垂直排列子元素，内部使用 `flex-col` 和 `space-y-{spacing}`。
 
 ```tsx
 <VStack spacing="6">
@@ -79,7 +79,7 @@ Vertically arranges children using `flex-col` and `space-y-{spacing}`.
 
 ### `Stack`
 
-Similar to `VStack` but aligns items with `items-start`.
+与 `VStack` 类似，但 `items-start` 对齐。
 
 ```tsx
 <Stack spacing="3">
@@ -90,7 +90,7 @@ Similar to `VStack` but aligns items with `items-start`.
 
 ### `ZStack`
 
-Stacks elements on top of each other with `relative` and `absolute` positioning.
+用于堆叠布局，类似 `position: relative + absolute`。
 
 ```tsx
 <ZStack className="h-48">
@@ -101,7 +101,7 @@ Stacks elements on top of each other with `relative` and `absolute` positioning.
 
 ### `Spacer`
 
-Fills available space inside a flex container, equivalent to `<div className="flex-1" />`.
+自动撑开剩余空间，等价于 `<div className="flex-1" />`。
 
 ```tsx
 <HStack>
@@ -113,22 +113,22 @@ Fills available space inside a flex container, equivalent to `<div className="fl
 
 ---
 
-## 🧩 Export
+## 🧩 导出方式
 
-You can import components individually or via the default export:
+你可以使用默认导出或命名导出：
 
 ```tsx
 import LayoutStack from "layout-stack";
-// or
+// 或
 import { HStack, VStack, Stack, ZStack, Spacer } from "layout-stack";
 ```
 
 ---
 
-## 🛠️ Notes for Developers
+## 🛠️ 开发者说明
 
-- Written in TypeScript with full type support
-- Tailwind utility classes are preserved in the output, ensure your host project has Tailwind properly configured
+- 本组件使用 TypeScript 编写，自动附带类型定义
+- Tailwind class 字符串会保留在构建结果中，使用方项目需要配置 Tailwind
 
 ---
 
